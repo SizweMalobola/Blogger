@@ -6,4 +6,5 @@
 
 <div> 
     <%= link_to "<< Back to Aricles List", articles_path %> 
+    <%= link_to "delete", article_path(@article),method: :delete,data:{confirm:'You sure?'} %> 
 </div>
