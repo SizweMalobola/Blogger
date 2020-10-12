@@ -4,6 +4,14 @@
 
 <p><strong>Body : <%= @article.body %></strong></p>
 
+<div>
+    <h3>Comments <%= @article.comments.size %></h3>
+    <%# ??? %>
+    <%= render partial: 'articles/comment', collection: @article.comments %>
+</div>
+<div>
+<%= render partial: 'comments/form' %>
+</div>
 <div> 
     <%= link_to "<< Back to Aricles List", articles_path %> 
     <%= link_to "delete", article_path(@article),method: :delete,data:{confirm:'You sure?'} %> 
