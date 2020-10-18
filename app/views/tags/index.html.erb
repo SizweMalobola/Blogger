@@ -1,0 +1,23 @@
+<h1>List of Tags</h1>
+
+<div>
+<table>
+    <tr>
+    <th>
+    Title
+    </th>
+    <th colspan="2">
+    Actions
+    </th>
+    </tr>
+
+    <% @tags.each do |tag| %>
+        <tr>
+        <td><%= tag.name %></td>
+        <td><%= link_to "Show", tag_path(tag) %></td>
+        <td><%= link_to "Delete Tag", tag_path(tag), method: :delete,data:{confirm: 'You Sure?'} %></td>
+        </tr>
+    <% end %>
+</table>
+</div>
+
