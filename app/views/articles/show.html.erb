@@ -8,6 +8,10 @@
 
 <p><strong>Title : <%= @article.title %></strong></p>
 
+<p><% if @article.image.exists? %>
+      <%= image_tag @article.image.url %><br/>
+  <% end %></p>
+
 <p><strong>Body : <%= @article.body %></strong></p>
 
 <div>
